@@ -14,7 +14,17 @@ Wanted to improve my bare-metal skills, so why not make a whole operating system
 - qemu-system-x86
 - make
 
-After installing the prerequisites, just run ```./run.sh```, which should build the binary and run qemu.
+After installing the prerequisites, use the following command to build for Debian:
+
+``` bash
+sudo make debian
+```
+
+Then use the following command to run the iso using qemu:
+
+``` bash
+./run.sh
+```
 
 ## License
 
