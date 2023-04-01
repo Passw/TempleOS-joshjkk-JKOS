@@ -1,6 +1,11 @@
 #include "stdio.h"
 #include "stdint.h"
 
+typedef struct VidChar {
+    uint8_t c;
+    uint8_t color;
+} vidchar_t;
+
 vidchar_t *vidmem = (vidchar_t *)0xb8000;
 
 uint8_t row = 0;

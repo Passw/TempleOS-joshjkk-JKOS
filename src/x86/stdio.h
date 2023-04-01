@@ -25,11 +25,6 @@ enum Colors {
 	COLOR_WHITE = 15
 };
 
-typedef struct VidChar {
-    uint8_t c;
-    uint8_t color;
-} vidchar_t;
-
 void set_color(uint8_t fore, uint8_t back);
 
 void clear();
