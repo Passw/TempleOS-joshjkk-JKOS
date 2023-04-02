@@ -14,11 +14,11 @@ x86_64_OBJECTS := $(x86_64_C_OBJECTS) $(x86_64_ASM_OBJECTS)
 
 $(KERNEL_OBJECTS): build/kernel/%.o : src/kernel/%.c
 	mkdir -p $(dir $@) && \
-	gcc -c $(CFLAGS) $(patsubst build/kernel/%.o, src/kernel/%.c, $@) -o $@
+	gcc -I src/x86 -c $(CFLAGS) $(patsubst build/kernel/%.o, src/kernel/%.c, $@) -o $@
 
 $(x86_64_C_OBJECTS): build/%.o : src/%.c
 	mkdir -p $(dir $@) && \
-	gcc -c $(CFLAGS) $(patsubst build/%.o, src/%.c, $@) -o $@
+	gcc -I src/x86 -c $(CFLAGS) $(patsubst build/%.o, src/%.c, $@) -o $@
 
 $(x86_64_ASM_OBJECTS): build/%.o : src/%.asm
 	mkdir -p $(dir $@) && \
