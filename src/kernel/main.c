@@ -2,7 +2,6 @@
 #include "../x86/stdlib.h"
 #include "../x86/stdint.h"
 #include "../x86/string.h"
-#include "../x86/graphics.h"
 #include "drivers/keyboard.h"
 
 void kernel_main() {
