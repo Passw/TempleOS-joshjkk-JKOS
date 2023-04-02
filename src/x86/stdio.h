@@ -31,8 +31,15 @@ void clear();
 
 void scroll();
 
+
 void putc(char c);
 
 void puts(const char *str);
+
+void mvputc(uint8_t row, uint8_t col, char c);
+
+void mvputs(uint8_t row, uint8_t col, const char *str);
+
+void log_msg(const char *sender, char *msg, uint8_t fore);
 
 #endif // STDIO_H
