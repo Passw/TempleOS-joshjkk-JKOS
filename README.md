@@ -2,6 +2,8 @@
 
 JK operating system.
 
+![jkos](https://user-images.githubusercontent.com/97398293/229361498-ca4ba2ee-f97f-4c31-a596-c8beb075d5a6.png)
+
 ## About
 
 Wanted to improve my bare-metal skills, so why not make a whole operating system?
