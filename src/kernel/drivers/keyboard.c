@@ -1,4 +1,5 @@
 #include "keyboard.h"
+#include "../../x86/stdio.h"
 #include "../../x86/stdlib.h"
 
 #define KBD_DATA 0x60
@@ -30,6 +31,8 @@ unsigned char kbd_map[128] = {
 int g_shift_press = 0;
 int g_ctrl_press = 0;
 int g_key_held = 0;
+
+int kbd_enabled = FALSE;
 
 void kbd_handler() {
     unsigned char scancode = inb(KBD_DATA);
@@ -63,10 +66,11 @@ void init_keyboard() {
     outb(0x64, 0x60);
     outb(0xF4, KBD_DATA);
     reg_int_handler(int_handlers, KBD_IRQ, kbd_handler);
+    log_msg("DRIVERS", "Keyboard enabled", COLOR_GREEN);
+    kbd_enabled = TRUE;
 }
 
 char getchar() {
-    init_keyboard();
     while (1) {
         kbd_handler();
         if (kbd_index > 0) {
