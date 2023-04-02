@@ -137,3 +137,28 @@ char* itoa(int val, int base) {
         buf[i] = "0123456789abcdef"[val % base];
     return &buf[i + 1];
 }
+
+void sleep(unsigned int milli) {
+    unsigned int i = 0; 
+    unsigned int j = 0;
+    for (i = 0; i < milli; i++) {
+        for (j = 0; j < 100000; j++) {
+            // Do nothing
+        }
+    }
+}
+
+
+unsigned char inb(unsigned short port) {
+    unsigned char value;
+    __asm__ __volatile__("inb %1, %0" : "=a" (value) : "dN" (port));
+    return value;
+}
+
+void outb(unsigned short port, unsigned char data) {
+    __asm__ __volatile__("outb %0, %1" : : "a" (data), "dN" (port));
+}
+
+void reg_int_handler(int_handler_t *int_handlers, unsigned int n, int_handler_t handler) {
+    int_handlers[n] = handler;
+}
