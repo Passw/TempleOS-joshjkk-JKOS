@@ -2,7 +2,7 @@
 
 JK operating system.
 
-![jkos](https://user-images.githubusercontent.com/97398293/229361498-ca4ba2ee-f97f-4c31-a596-c8beb075d5a6.png)
+![Screenshot from 2023-04-02 19-23-57](https://user-images.githubusercontent.com/97398293/229371560-f58da1b1-3907-4362-9f63-ee843ef5a1f7.png)
 
 ## About
 
